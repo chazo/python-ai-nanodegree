@@ -45,7 +45,7 @@ def predict(image_path, model, device, topk=5):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('image_path')
-    parser.add_argument('checkpoint')
+    parser.add_argument('--checkpoint', type=str, default='checkpoint.pth')
     parser.add_argument('--top_k', type=int, default=5)
     parser.add_argument('--category_names', default='cat_to_name.json')
     parser.add_argument('--gpu', action='store_true')
