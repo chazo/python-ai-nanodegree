@@ -44,7 +44,7 @@ def build_model(arch='vgg16', hidden_units=512):
         )
         model.classifier = classifier
     elif arch == 'resnet18':
-        model = models.resnet18(ResNet18_Weights.DEFAULT)
+        model = models.resnet18(weights=ResNet18_Weights.DEFAULT)
         input_units = model.fc.in_features
         classifier = nn.Sequential(
             nn.Linear(input_units, hidden_units),
