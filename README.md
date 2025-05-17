@@ -18,11 +18,15 @@ Train a deep learning model (VGG16 or ResNet18) on an image dataset using transf
 
 **Usage:**
 ```bash
-python train.py --data_dir <data_directory> --save_dir <save_directory> --arch <model_architecture> --learning_rate <learning_rate> --hidden_units <hidden_units> --epochs <num_epochs> --gpu
+python train.py <data_directory> --save_dir <save_directory> --arch <model_architecture> --learning_rate <learning_rate> --hidden_units <hidden_units> --epochs <num_epochs> --gpu
+```
+**Example:**
+```bash
+python train.py ./flowers/train/ --gpu
 ```
 
 **Arguments:**
-- `--data_dir` (required): Path to dataset.
+- `argument 1` (required): Path to dataset.
 - `--save_dir`: Directory to save checkpoint (default: current).
 - `--arch`: Model architecture (`vgg16` or `resnet18`, default: `resnet18`).
 - `--learning_rate`: Learning rate (default: 0.001).
@@ -45,11 +49,15 @@ Predict image classes using a trained model checkpoint.
 
 **Usage:**
 ```bash
-python predict.py --image_path <image_path> --checkpoint <checkpoint_path> --top_k <top_k> --category_names <category_names_json> --gpu
+python predict.py <image_path> --checkpoint <checkpoint_path> --top_k <top_k> --category_names <category_names_json> --gpu
+```
+**Example:**
+```bash
+python predict.py ./flowers/test/9/image_06410.jpg --gpu
 ```
 
 **Arguments:**
-- `--image_path` (required): Path to input image.
+- `argument 1` (required): Path to input image.
 - `--checkpoint` (required): Path to model checkpoint.
 - `--top_k`: Number of top predictions (default: 5).
 - `--category_names`: JSON file mapping classes to names.
