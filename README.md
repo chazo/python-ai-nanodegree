@@ -1,3 +1,6 @@
+Project Skeleton:
+This project is based on the starter code provided in the Udacity AI Programming with Python Nanodegree course.
+
 
 # Image Classifier Project
 
@@ -95,3 +98,4 @@ Open the notebook in Jupyter, run cells sequentially, and modify parameters as n
 **Note:**  
 Datasets should be organized in `train`, `valid`, and `test` subfolders. Use the `--gpu` flag only if a CUDA-compatible GPU is available.
 ```
+
